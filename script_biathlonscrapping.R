@@ -19,7 +19,7 @@ source1<-remDr$getPageSource()[[1]] %>%
 res <-source1[[1]][-1,] 
 }
 
-db1<-results("2021","M","02")
+
 
 shooting<- function(year,gender,wcnr) {
 remDr$navigate(paste0("https://www.realbiathlon.com/races.html?raceId=BT",year,"SWRLCP",wcnr,"S",gender,"SP&year=",year,"&level=1&discipline=Total&category=shooting&relative=total&overview=false&min=120&chart=false&stat=&rank=false&movingavg=none&localtime=false&compare=total"))
@@ -32,8 +32,9 @@ res1<-source2[[1]][-1,]
 }
 
 
-db2<-shooting("2021","M","02")
-
+resM202102<-results("2021","M","02")
+shoot202102<-shooting("2021","M","02")
+resW201904<-results("2021","W","01")
 
 
 remDr$close()
